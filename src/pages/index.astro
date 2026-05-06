@@ -1,0 +1,102 @@
+---
+import Inicio from '../components/Inicio.astro';
+import Layout from '../layouts/Layout.astro';
+
+import banner from '../assets/bannerBackground.gif'
+import avatar from '../assets/Avatar.png'
+import { Image } from 'astro:assets';
+
+---
+
+<Layout>
+    <figure class="banner-holder">
+        <Image class="banner" src={banner} alt="banner de fondo"/>
+    </figure>
+    <section class="content">
+        <Image class="profile-pic" src={avatar} alt="foto de perfil" />
+        <Inicio />
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+    </section>
+</Layout>
+
+<style>
+    .banner-holder{
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .banner{
+        width: 100%;
+        height: auto;
+        margin-top: -15%;
+        margin-bottom: -25%;
+    }
+    .content{
+        width: 100vw;
+        height: 100%;
+        background-color: #1e1e1e;
+        position: fixed;
+    }
+    .profile-pic{
+        width: 10vw;
+        height: auto;
+        box-shadow: 2px 4px 10px black;
+        border-radius: 70%;
+        margin-left: 15vw;
+        margin-top: -5%;
+    }   
+</style>
