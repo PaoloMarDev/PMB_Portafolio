@@ -1,0 +1,40 @@
+---
+const PROJECTS = [
+    {
+        title : 'Project 1',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili',
+        link: '#',
+        github: '#',
+        image: '',
+        tags: ['HTML', "CSS", "JavaScript"]
+    }
+]
+---
+
+<section id="projects" >
+    <div class="projects-header">
+        <div class="linea derecha"></div>
+        <h2 class="projects-title">Proyectos</h2>
+        <div class="linea izquieda"></div>
+    </div>
+</section>
+
+<style>
+    .projects-header{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .projects-title{
+        color: white;
+        font-weight: bold;
+        font-size: clamp(1rem, 3vw, 4rem);
+        text-align: center;
+        width: auto;
+    }
+    .linea{
+        flex-grow: 1;
+        height: 1px;
+        background-color: white;
+    }
+</style>
