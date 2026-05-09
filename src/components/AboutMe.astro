@@ -3,14 +3,14 @@ import { Image } from "astro:assets";
 import greenMonster from '../assets/GreenMonster.gif'
 ---
 <section id="about" >
-    <div class="AboutMe-header">
+    <div class="AboutMe-header animate-on-scroll">
         <div class="linea derecha"></div>
-        <h2 class="Aboutme-title">Sobre mi</h2>
+        <h2 class="AboutMe-title">Sobre mi</h2>
         <div class="linea izquieda"></div>
     </div>
     <section class="info">
         <div>
-            <p class="description">
+            <p class="description animate-on-scroll">
                 Soy desarrollador full-stack enfocado en construir aplicaciones que resuelvan problemas.
                 Me interesa que las soluciones no solo funcionen, sino que sean claras, 
                 bien pensadas y fáciles de usar.
@@ -21,7 +21,7 @@ import greenMonster from '../assets/GreenMonster.gif'
 
             </p>
         </div>
-        <figure class="monsterImage">
+        <figure class="monsterImage animate-on-scroll">
             <Image class="monster" src={greenMonster} alt="" />
         </figure>
     </section>
@@ -42,7 +42,7 @@ import greenMonster from '../assets/GreenMonster.gif'
         align-items: center;
         gap: 2rem;
     }
-    .Aboutme-title{
+    .AboutMe-title{
         color: white;
         font-weight: bold;
         font-size: clamp(1rem, 3vw, 4rem);

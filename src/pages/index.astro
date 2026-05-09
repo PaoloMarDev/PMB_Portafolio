@@ -3,6 +3,7 @@ import Inicio from '../components/Inicio.astro';
 import Layout from '../layouts/Layout.astro';
 import AboutMe from '../components/AboutMe.astro';
 import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 
 import banner from '../assets/bannerBackground.gif'
 import avatar from '../assets/Avatar.png'
@@ -18,10 +19,11 @@ import { Image } from 'astro:assets';
     </figure>
     <section class="content">
         <section class="content-container">
-            <Image class="profile-pic" src={avatar} alt="foto de perfil" />
+            <Image class="profile-pic animate-on-scroll" src={avatar} alt="foto de perfil" />
             <Inicio/>
             <AboutMe/>
             <Projects />
+            <Contact />
         </section>
     </section>
 </Layout>

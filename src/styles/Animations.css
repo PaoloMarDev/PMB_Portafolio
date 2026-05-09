@@ -1,0 +1,15 @@
+
+
+.animate-on-scroll {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* will-change le dice al navegador que prepare la tarjeta para animarse, mejorando los FPS */
+will-change: opacity, transform; 
+}
+
+/* Estado final: Visible y en su posición original */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

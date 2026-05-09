@@ -1,6 +1,7 @@
 ---
 import CursorTrail from '../components/CursorTrail.astro';
 import Header from '../components/Header.astro';
+import '../styles/Animations.css'
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import Header from '../components/Header.astro';
 		<title>PaoloMarDev-Portfolio</title>
 	</head>
 	<body>
+		<script src="../scripts/AnimationController.js"></script>
 		<Header />
 		<slot />
 		<CursorTrail />

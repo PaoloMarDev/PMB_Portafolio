@@ -1,21 +1,25 @@
 ---
-const PROJECTS = [
-    {
-        title : 'Project 1',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili',
-        link: '#',
-        github: '#',
-        image: '',
-        tags: ['HTML', "CSS", "JavaScript"]
-    }
-]
+import { Image } from "astro:assets";
+import ProjectCard from "./ProjectCard.astro";
 ---
 
+
 <section id="projects" >
-    <div class="projects-header">
+    <div class="projects-header animate-on-scroll">
         <div class="linea derecha"></div>
         <h2 class="projects-title">Proyectos</h2>
         <div class="linea izquieda"></div>
+    </div>
+    <div class="filters animate-on-scroll">
+        <img src="/html.webp" alt="Logo de HTML" class="logo" />
+        <img src="/css.webp" alt="Logo de CSS" class="logo" />
+        <img src="/js.webp" alt="Logo de JS" class="logo" />
+        <img src="/React.webp" alt="Logo de REACT" class="logo" />
+        <img src="/sql.webp" alt="Logo de SQL" class="logo" />
+        <img src="/Unity.webp" alt="Logo de UNITY" class="logo" />
+    </div>
+    <div class="projects-content">
+        <ProjectCard />
     </div>
 </section>
 
@@ -36,5 +40,27 @@ const PROJECTS = [
         flex-grow: 1;
         height: 1px;
         background-color: white;
+    }
+    .filters{
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+    .projects-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+        justify-content: center;
+        width: 100%;
+        gap: 5rem;
+    }
+    .logo{
+        width: auto;
+        height: 80px;
+        transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .logo:hover {
+        transform: scale(1.1);
     }
 </style>
