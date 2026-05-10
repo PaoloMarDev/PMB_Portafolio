@@ -3,6 +3,8 @@ article{
         padding: 0%;
     }
     .card-container{
+        display: flex;
+        flex-direction: column;
         height: 100%;
         width: 100%;
         background-color: #202124;
@@ -12,12 +14,15 @@ article{
     }
     .card-content{
         padding: 20px;
-
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
     .card-content p{
         color: #acacac;
         display: -webkit-box;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -26,7 +31,9 @@ article{
     }
     .project-banner{
         width: 100%;
-        height: auto;
+        height: 220px; 
+        object-fit: cover;
+        object-position: center;
         border-radius: 20px 20px 0px 0px;
     }
     .project-title{
@@ -40,6 +47,7 @@ article{
         padding: 0%;
         list-style: none;
         gap: 2rem;
+        flex-wrap: wrap;
     }
     .tags{
         padding: 5px;
@@ -48,9 +56,14 @@ article{
         border-radius: 100px;
         box-shadow: 2px 4px 10px black;
     }
-    .githubIconProjects{
-    width: 10%;
-    height: auto;
+    .buttons-container{
+        display: flex;
+        gap: 15px;
+        margin-top: auto;
+    }
+    .BtnsProjects{
+    width: auto;
+    height: 3.5vh;
     box-shadow: 2px 4px 10px black;
     border-radius: 70%;
     transition:
@@ -60,7 +73,7 @@ article{
     will-change: transform;
     }
     
-    .githubIconProjects:hover{
+    .BtnsProjects:hover{
         transform: scale(1.15) translateY(-2px);
         filter: brightness(1.2);
     }

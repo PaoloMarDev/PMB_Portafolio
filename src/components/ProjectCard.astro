@@ -1,6 +1,8 @@
 ---
 import '../styles/ProjectCard.css'
 import banner from '../assets/bannerBackground.gif'
+import bannerRunicRush from '../assets/RunicRush.jpg'
+import bannerMAC from '../assets/MACServiceDesk.jpg'
 import { Image } from 'astro:assets';
 
 const TAG_COLORS = {
@@ -9,26 +11,35 @@ const TAG_COLORS = {
     JavaScript: '#D9C32B',
     Python: '#3776AB',
     React: '#61DAFB',
-    SQL: '#4479A1'
+    SQL: '#4479A1',
+    Unity : '#8427F5',
 };
 
 const PROJECTS = [
     {
-        title : 'Project 1',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili asdadasds',
-        link: '#',
-        github: '#',
+        title : 'Recorrido Virtual',
+        description: '',
+        link: '',
+        github: '',
         image: banner,
         tags: ['HTML', "CSS", "JavaScript"]
     },
     {
-        title : 'Project 2',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. lalal lelele lilili',
-        link: '#',
-        github: '#',
-        image: banner,
-        tags: ['Python', "SQL", "React"]
-    }
+        title : 'Runic Rush',
+        description: 'Videojuego desarrollado para la plataforma educativa "Aulify". Construido en Unity, incluyendo una integración web Full-Stack mediante React, AWS y bases de datos SQL para gestionar el progreso del jugador.',
+        link: 'https://play.unity.com/es/games/3bb52534-fa41-4500-869f-898ce485d50a/runicrush',
+        github: '',
+        image: bannerRunicRush,
+        tags: ['Unity', "SQL", "JavaScript"]
+    },
+    {
+        title : 'MAC Service Desk',
+        description: 'Sistema de soporte técnico para la empresa MAC Computadoras. Lideré al equipo bajo metodología SCRUM y participé como desarrollador Full-Stack, construyendo la aplicación web en React y estructurando la API y base de datos con SQL y AWS.',
+        link: 'asd',
+        github: 'asd',
+        image: bannerMAC,
+        tags: ['React', "SQL", "JavaScript"]
+    },
 ]
 ---
 
@@ -39,15 +50,28 @@ const PROJECTS = [
             <div class="card-content">
                 <h3 class="project-title">{project.title}</h3>
                 <ul class="tags-container">
-                {project.tags.map(tag => (
-                    <li class="tags"style={{ backgroundColor: TAG_COLORS[tag as keyof typeof TAG_COLORS] || '#333'}}>
-                        {tag}
-                    </li>
+                    {project.tags.map(tag => (
+                        <li class="tags"style={{ backgroundColor: TAG_COLORS[tag as keyof typeof TAG_COLORS] || '#333'}}>
+                            {tag}
+                        </li>
                     ))}
                 </ul>
                 <p>{project.description}</p>
-                <a href=""><img src='/github.webp' alt="GitHub Button" class="githubIconProjects"/></a>
+                <div class="buttons-container">
+                    {project.github && (
+                        <a href={project.github} class="link" target="_blank">
+                            <img src='/github.webp' alt="GitHub Button" class="BtnsProjects"/>
+                        </a>
+                        )
+                    }
+                    {project.link && (
+                        <a href={project.link} class="link" target="_blank">
+                            <img src='/web.webp' alt="Web Button" class="BtnsProjects"/>
+                        </a>
+                        )
+                    }
                 </div>
+            </div>
         </article>
     ))
 }
