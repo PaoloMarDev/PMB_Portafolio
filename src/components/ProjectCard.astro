@@ -1,6 +1,6 @@
 ---
+import '../styles/ProjectCard.css'
 import banner from '../assets/bannerBackground.gif'
-import github from '../assets/github.png'
 import { Image } from 'astro:assets';
 
 const TAG_COLORS = {
@@ -46,75 +46,8 @@ const PROJECTS = [
                     ))}
                 </ul>
                 <p>{project.description}</p>
-                <a href=""><Image src={github} alt="GitHub Button" class="githubIcon"/></a>
+                <a href=""><img src='/github.webp' alt="GitHub Button" class="githubIconProjects"/></a>
                 </div>
         </article>
     ))
 }
-
-<style>
-    article{
-        margin: 0%;
-        padding: 0%;
-    }
-    .card-container{
-        height: 100%;
-        width: 100%;
-        background-color: #202124;
-        box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.6);
-        color: white;
-        border-radius: 25px;
-    }
-    .card-content{
-        padding: 20px;
-
-    }
-    .card-content p{
-        color: #acacac; /* o el color que estés usando */
-        /* La magia del truncamiento */
-        display: -webkit-box;
-        -webkit-line-clamp: 5; /* Máximo número de líneas que quieres mostrar */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        min-height: 6rem;
-    }
-    .project-banner{
-        width: 100%;
-        height: auto;
-        border-radius: 20px 20px 0px 0px;
-    }
-    .project-title{
-        margin: 0%;
-        text-shadow: 2px 4px 10px black;
-    }
-    .tags-container{
-        display: flex;
-        padding: 0%;
-        list-style: none;
-        gap: 2rem;
-    }
-    .tags{
-        padding: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: 100px;
-        box-shadow: 2px 4px 10px black;
-    }
-    .githubIcon{
-    width: 10%;
-    height: auto;
-    box-shadow: 2px 4px 10px black;
-    border-radius: 70%;
-    transition:
-        transform 0.15s ease,
-        filter 0.15s ease;
-    transform-origin: center;
-    will-change: transform;
-    }
-    
-    .githubIcon:hover{
-        transform: scale(1.15) translateY(-2px);
-        filter: brightness(1.2);
-    }
-</style>

@@ -19,9 +19,9 @@ import '../styles/Animations.css'
 	</head>
 	<body>
 		<script src="../scripts/AnimationController.js"></script>
+		<CursorTrail />
 		<Header />
 		<slot />
-		<CursorTrail />
 		<br>
 		<br>
 		<br>
@@ -32,6 +32,7 @@ import '../styles/Animations.css'
 <style>
 	html{
 		font-family: "Inter", sans-serif;
+		scroll-behavior: smooth;
 	}
 	body {
 		background-color: #202124;

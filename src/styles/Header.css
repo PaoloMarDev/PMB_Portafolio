@@ -5,6 +5,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     align-items: center;
     width: 100%;
+    z-index: 9998;
 }
 .header{
     padding: 20px;

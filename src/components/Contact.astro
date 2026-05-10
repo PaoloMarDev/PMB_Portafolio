@@ -1,40 +1,25 @@
 ---
+import '../styles/Contact.css'
 ---
 
-<section id="contacts" >
+<section id="contact" >
     <div class="contacts-header">
         <div class="linea derecha"></div>
         <h2 class="contacts-title">Contacto</h2>
         <div class="linea izquieda"></div>
     </div>
-    <div class="contact-content">
+    <div class="contact-container">
+        <button id="email-btn" class="contact-card">
+            <img src="/email.webp" alt="Icono de correo" class="contact-icon" />
+            <span>PaoloMarDev_@outlook.com</span>
+        </button>
+        <a href="https://www.linkedin.com/in/paolo-martini-bellot/" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <img src="/linkedin.webp" alt="Icono de LinkedIn" class="contact-icon" />
+            <span>Paolo - Linkedin</span>
+        </a>
     </div>
 </section>
 
-<style>
-    .contacts-header{
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        margin-top: 50px;
-    }
-    .contacts-header{
-        color: white;
-        font-weight: bold;
-        font-size: clamp(1rem, 3vw, 4rem);
-        text-align: center;
-        width: auto;
-    }
-    .contacts-title{
-        color: white;
-        font-weight: bold;
-        font-size: clamp(1rem, 3vw, 4rem);
-        text-align: center;
-        width: auto;
-    }
-    .linea{
-        flex-grow: 1;
-        height: 1px;
-        background-color: white;
-    }
-</style>
+<script>
+    import '../scripts/EmailButton.js'
+</script>

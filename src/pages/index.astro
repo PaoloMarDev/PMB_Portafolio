@@ -1,4 +1,5 @@
 ---
+import '../styles/index.css'
 import Inicio from '../components/Inicio.astro';
 import Layout from '../layouts/Layout.astro';
 import AboutMe from '../components/AboutMe.astro';
@@ -24,39 +25,7 @@ import { Image } from 'astro:assets';
             <AboutMe/>
             <Projects />
             <Contact />
+            <br>
         </section>
     </section>
 </Layout>
-
-<style>
-    p{
-        color: white;
-    }
-    .content-container{
-        width: 90%; 
-        max-width: clamp(1200px, 1500px, 1800px);
-        margin: 0 auto;
-    }
-    .banner-holder{
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-    .banner{
-        width: 100%;
-        height: auto;
-        margin-top: -15%;
-        margin-bottom: -25%;
-    }
-    .content{
-        width: 100%;
-        background-color: #1e1e1e;
-    }
-    .profile-pic{
-        width: 10vw;
-        height: auto;
-        box-shadow: 2px 4px 10px black;
-        border-radius: 70%;
-        margin-top: -5%;
-    }
-</style>
