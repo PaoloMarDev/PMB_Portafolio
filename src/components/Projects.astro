@@ -11,12 +11,12 @@ import ProjectCard from "./ProjectCard.astro";
         <div class="linea izquieda"></div>
     </div>
     <div class="filters animate-on-scroll">
-        <img src="/html.webp" alt="Logo de HTML" class="logo" />
-        <img src="/css.webp" alt="Logo de CSS" class="logo" />
-        <img src="/js.webp" alt="Logo de JS" class="logo" />
-        <img src="/React.webp" alt="Logo de REACT" class="logo" />
-        <img src="/sql.webp" alt="Logo de SQL" class="logo" />
-        <img src="/Unity.webp" alt="Logo de UNITY" class="logo" />
+        <img src={`${import.meta.env.BASE_URL}html.webp`} alt="Logo de HTML" class="logo" />
+        <img src={`${import.meta.env.BASE_URL}css.webp`} alt="Logo de CSS" class="logo" />
+        <img src={`${import.meta.env.BASE_URL}js.webp`} alt="Logo de JS" class="logo" />
+        <img src={`${import.meta.env.BASE_URL}React.webp`} alt="Logo de REACT" class="logo" />
+        <img src={`${import.meta.env.BASE_URL}sql.webp`} alt="Logo de SQL" class="logo" />
+        <img src={`${import.meta.env.BASE_URL}Unity.webp`} alt="Logo de UNITY" class="logo" />
     </div>
     <div class="projects-content">
         <ProjectCard />
