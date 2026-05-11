@@ -3,6 +3,8 @@ import '../styles/ProjectCard.css'
 import banner from '../assets/bannerBackground.gif'
 import bannerRunicRush from '../assets/RunicRush.jpg'
 import bannerMAC from '../assets/MACServiceDesk.jpg'
+import bannerTanuki from '../assets/AgenteTanuki.jpg'
+import RecorridoVirtual from '../assets/RecorridoVirtual.png'
 import { Image } from 'astro:assets';
 
 const TAG_COLORS = {
@@ -18,27 +20,35 @@ const TAG_COLORS = {
 const PROJECTS = [
     {
         title : 'Recorrido Virtual',
-        description: '',
-        link: '',
-        github: '',
-        image: banner,
+        description: 'Recorrido virtual 360° para el centro de investigación CICATA Morelos. Lideré al equipo bajo metodología SCRUM para personalizar una arquitectura open-source (Marzipano, HTML, CSS, JS), implementando hotspots interactivos y un chatbot integrado.',
+        link: 'https://paolomardev.github.io/Despliege-Recorrido-Prueba/',
+        github: 'https://github.com/PaoloMarDev/Despliege-Recorrido-Prueba',
+        image: RecorridoVirtual,
         tags: ['HTML', "CSS", "JavaScript"]
     },
     {
-        title : 'Runic Rush',
-        description: 'Videojuego desarrollado para la plataforma educativa "Aulify". Construido en Unity, incluyendo una integración web Full-Stack mediante React, AWS y bases de datos SQL para gestionar el progreso del jugador.',
+        title : 'MAC Service Desk',
+        description: 'Sistema de soporte técnico para la empresa MAC Computadoras. Lideré un equipo bajo metodología SCRUM y participé como desarrollador Full-Stack, construyendo la aplicación web en React y estructurando la API y base de datos con SQL y AWS.',
+        link: '',
+        github: 'https://github.com/PaoloMarDev/Mac_Tickets_Web',
+        image: bannerMAC,
+        tags: ['React', "SQL", "JavaScript"]
+    },
+    {
+    title : 'Runic Rush',
+    description: 'Videojuego desarrollado para la plataforma educativa "Aulify". Construido en Unity, incluyendo una integración web Full-Stack mediante React, AWS y bases de datos SQL para gestionar el progreso del jugador.',
         link: 'https://play.unity.com/es/games/3bb52534-fa41-4500-869f-898ce485d50a/runicrush',
         github: '',
         image: bannerRunicRush,
         tags: ['Unity', "SQL", "JavaScript"]
     },
     {
-        title : 'MAC Service Desk',
-        description: 'Sistema de soporte técnico para la empresa MAC Computadoras. Lideré al equipo bajo metodología SCRUM y participé como desarrollador Full-Stack, construyendo la aplicación web en React y estructurando la API y base de datos con SQL y AWS.',
-        link: 'asd',
-        github: 'asd',
-        image: bannerMAC,
-        tags: ['React', "SQL", "JavaScript"]
+    title : 'Machine Learning Tanuki',
+    description: 'Proyecto desarrollado para Rewind Games enfocado en la creación de un agente virtual entrenado con Unity ML-Agents, diseñado para funcionar como un NPC guía. El objetivo fue que el agente pudiera seguir al jugador, mantenerse cerca de él y generar trayectorias.',
+        link: '',
+        github: '',
+        image: bannerTanuki,
+        tags: ['Unity']
     },
 ]
 ---

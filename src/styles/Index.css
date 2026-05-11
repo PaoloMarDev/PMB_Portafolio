@@ -2,7 +2,7 @@
         color: white;
     }
     .content-container{
-        width: 90%; 
+        width: 75%; 
         max-width: clamp(1200px, 1500px, 1800px);
         margin: 0 auto;
     }
@@ -26,5 +26,5 @@
         height: auto;
         box-shadow: 2px 4px 10px black;
         border-radius: 70%;
-        margin-top: -5%;
+        margin-top: -7%;
     }

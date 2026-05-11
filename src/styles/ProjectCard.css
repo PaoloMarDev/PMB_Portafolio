@@ -19,7 +19,7 @@ article{
         flex-grow: 1;
     }
     .card-content p{
-        color: #acacac;
+        color: #bababa;
         display: -webkit-box;
         -webkit-line-clamp: 6;
         line-clamp: 6;
