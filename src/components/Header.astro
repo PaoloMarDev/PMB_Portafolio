@@ -1,12 +1,17 @@
 ---
-import "../styles/Header.css"
 ---
 <header class="header-background">
-    <nav class="header">
-        <a class="menu-option" href="#top">Inicio</a>
-        <a class="menu-option" href="#about">Sobre mi</a>
-        <a class="menu-option" href="#projects">Proyectos</a>
-        <a class="menu-option" href="#contact">Contacto</a>
-        <a href={`${import.meta.env.BASE_URL}/CV_Paolo.pdf`} download="CV_Paolo.pdf"><button class="cv">CV</button></a>
+    <nav>
+        <div class="nav-logo">PaoloMar<span>.</span>dev</div>
+        <ul class="nav-links">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:12px">
+            <span class="avail-dot">Disponible</span>
+            <a href=`${import.meta.env.BASE_URL}/CV_Paolo.pdf` class="nav-cta">Descargar CV →</a>
+        </div>
     </nav>
 </header>

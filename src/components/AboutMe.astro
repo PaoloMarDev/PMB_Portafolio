@@ -1,32 +1,66 @@
 ---
 import { Image } from "astro:assets";
 import greenMonster from '../assets/GreenMonster.gif'
-import '../styles/AboutMe.css'
 ---
-<section id="about" >
-    <div class="AboutMe-header animate-on-scroll">
-        <div class="linea derecha"></div>
-        <h2 class="AboutMe-title">Sobre mi</h2>
-        <div class="linea izquieda"></div>
-    </div>
-    <section class="info">
-        <div class="description-container">
-            <p class="description animate-on-scroll">
-                <span>Hola!</span> Soy Paolo, un desarrollador al que le gusta entender el "por qué" detrás de cada tecnología, 
-                en lugar de simplemente usar herramientas por usarlas.
-                <br><br>
-                Además del <span>desarrollo web</span>, me gusta la <span>creación de videojuegos</span>, 
-                <span>inteligencia artificial</span> o simplement construir alguna herramienta 
-                que nos ayude en la vida diaria.
-                <br><br>
-                Cuando no estoy programando, mis hobbies son tocar el piano, 
-                editar videos, cocinar, hacer ejercicio o disfrutar de una buena película o serie. 
-                <br><br>
-                Soy una persona tranquila, enfocada y responsable que siempre está buscando mejorar y aprender algo nuevo <span>:D</span>.
-            </p>
+<!-- ABOUT / BENTO -->
+<section id="sobre-mi">
+  <div class="container">
+    <div class="section-eyebrow">Sobre mí</div>
+    <h2 class="section-title">Un desarrollador que entiende<br>el por qué de cada decisión técnica.</h2>
+ 
+    <div class="bento">
+ 
+      <div class="bento-card wide reveal">
+        <div class="bento-label">Enfoque profesional</div>
+        <div class="bento-title">Desarrollo con propósito</div>
+        <div class="bento-text" style="margin-bottom:1rem">
+          Soy Paolo, desarrollador Full-Stack con experiencia liderando equipos técnicos bajo SCRUM para entregar soluciones reales a clientes reales.
+          Me especializo en construir aplicaciones web escalables y experiencias interactivas, desde sistemas empresariales hasta videojuegos.
         </div>
-        <figure class="monsterImage animate-on-scroll">
-            <Image class="monster" src={greenMonster} alt="" />
-        </figure>
-    </section>
+        <div class="bento-text">
+          Lo que me diferencia: entiendo el <em>por qué</em> detrás de cada tecnología. No uso herramientas porque estén de moda; las elijo porque resuelven el problema correcto de la manera más eficiente.
+        </div>
+      </div>
+ 
+      <div class="bento-card reveal" style="text-align:center">
+        <div class="bento-label">Proyectos completados</div>
+        <div class="big-text">4<span>+</span></div>
+        <div class="bento-text">Para clientes como CICATA, MAC Computadoras, Aulify y Rewind Games.</div>
+      </div>
+ 
+      <div class="bento-card reveal">
+        <div class="bento-label">Metodología</div>
+        <div class="bento-title">Liderazgo SCRUM</div>
+        <div class="bento-text">Lideré equipos de desarrollo en proyectos universitarios con clientes externos, gestionando sprints, entregas y comunicación técnica.</div>
+        <div class="tech-strip">
+          <span class="tech-badge green">SCRUM</span>
+          <span class="tech-badge blue">Jira</span>
+          <span class="tech-badge blue">Trello</span>
+          <span class="tech-badge blue">ClickUp</span>
+        </div>
+      </div>
+ 
+      <div class="bento-card reveal">
+        <div class="bento-label">Intereses técnicos</div>
+        <div class="bento-title">Más allá del web</div>
+        <div class="bento-text" style="margin-bottom:0.75rem">Videojuegos · Inteligencia Artificial · Automatización · Herramientas que simplifican la vida diaria.</div>
+        <div class="tech-strip">
+          <span class="tech-badge primary">Unity</span>
+        </div>
+      </div>
+ 
+      <div class="bento-card accent reveal">
+        <div class="bento-label">Disponibilidad</div>
+        <div class="bento-title" style="color:var(--accent2)">✦ Abierto a oportunidades</div>
+        <div class="bento-text">Busco mi primera posición como desarrollador Junior. Disponible para trabajo remoto o presencial en México.</div>
+      </div>
+ 
+      <div class="bento-card reveal">
+        <div class="bento-label">Fuera del código</div>
+        <div class="bento-title">Piano · Video · Cocina</div>
+        <div class="bento-text">Tocar el piano entrena el pensamiento estructurado. Editar video afina el ojo para el detalle. Cocinar enseña que el proceso importa tanto como el resultado.</div>
+      </div>
+ 
+    </div>
+  </div>
 </section>

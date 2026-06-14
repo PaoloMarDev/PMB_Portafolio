@@ -1,20 +1,91 @@
 ---
-import '../styles/Inicio.css'
 ---
 
-<section class="inicio">
-    <div class="intro animate-on-scroll">
-        <h1 class="name">PaoloMar<span>.</span>Dev</h1>
-        <p class="rol">Desarrollador Full-Stack <span>&lt;/&gt;</span></p>
-        <p class="resume">Experiencia en el desarrollo de <span>aplicaciones</span> que resuelven problemas complejos con un enfoque <span>eficiente y escalable</span>.
-        <div class="icons">
-            <a href="https://github.com/PaoloMarDev" target="_blank">
-                <img class="githubIcon" src={`${import.meta.env.BASE_URL}/github.webp`} alt="github Icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/paolo-martini-bellot/" target="_blank">
-                <img class="linkedinIcon" src={`${import.meta.env.BASE_URL}/linkedin.webp`} alt="linkedin Icon" />
-            </a>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+    
+        <!-- Información -->
+        <div class="hero-left">
+            <div class="hero-eyebrow">✦ Full-Stack &amp; Game Developer</div>
+            <h1 class="hero-title">
+                Construyo software<br>que resuelve<br><span class="hl">problemas reales.</span>
+            </h1>
+            <p class="hero-sub">
+                Desarrollo aplicaciones completas y experiencias interactivas.
+                Desde sistemas de soporte empresarial hasta videojuegos. Siempre bajo SCRUM, siempre orientado al impacto positivo y útil.
+            </p>
+            <div class="hero-ctas">
+                <a href="#proyectos" class="btn-primary">Ver proyectos →</a>
+                <a href="#contacto" class="btn-secondary">Hablemos</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-num">4<span>+</span></div>
+                    <div class="stat-label">Proyectos reales</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">4<span>+</span></div>
+                    <div class="stat-label">Trabajado con Empresas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">12<span>+</span></div>
+                    <div class="stat-label">Tecnologías Usadas</div>
+                </div>
+            </div>
         </div>
+        
+        <!-- Terminal -->
+      <div class="hero-right reveal">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="terminal-body">
+            <div><span class="t-prompt">~</span> <span class="t-cmd">cat developer.json</span></div>
+            <div style="margin-top:8px">
+              <span class="t-comment">{</span>
+              &nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-string">"Paolo Martini Bellot"</span>,<br>
+              &nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-string">"Full-Stack Developer"</span>,<br>
+              &nbsp;&nbsp;<span class="t-key">"stack"</span>: [<span class="t-string">"React"</span>, <span class="t-string">"JavaScript"</span>, <span class="t-string">"SQL"</span>, <span class="t-string">"GitHub"</span>],<br>
+              &nbsp;&nbsp;<span class="t-key">"gamedev"</span>: <span class="t-string">"Unity"</span>,<br>
+              &nbsp;&nbsp;<span class="t-key">"methodology"</span>: <span class="t-string">"ÁGIL"</span>,<br>
+              &nbsp;&nbsp;<span class="t-key">"available"</span>: <span class="t-val">true</span><br>
+              <span class="t-comment">}</span>
+            </div>
+            <div style="margin-top:8px"><span class="t-prompt">~</span> <span class="t-cursor"></span></div>
+          </div>
+        </div>
+ 
+        <div class="mini-cards" style="margin-top:12px">
+          <div class="mini-card">
+            <div class="mini-card-icon" style="background:var(--accent-dim2)">🌐</div>
+            <div class="mini-card-title">Web Full-Stack</div>
+            <div class="mini-card-sub">React · JavaScript · SQL</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card-icon" style="background:var(--green-dim)">🎮</div>
+            <div class="mini-card-title">Game Dev</div>
+            <div class="mini-card-sub">Unity · C# · C++</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card-icon" style="background:var(--blue-dim)">☁️</div>
+            <div class="mini-card-title">Cloud & Backend</div>
+            <div class="mini-card-sub">AWS · REST APIs · SQL</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card-icon" style="background:var(--amber-dim)">🤖</div>
+            <div class="mini-card-title">Trabajo con IA</div>
+            <div class="mini-card-sub">Gemini · Claude · Agentes</div>
+          </div>
+        </div>
+      </div>
+      </div>
+ 
     </div>
+  </div>
 </section>
 

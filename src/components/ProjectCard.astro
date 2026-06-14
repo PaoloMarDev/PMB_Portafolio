@@ -1,5 +1,4 @@
 ---
-import '../styles/ProjectCard.css'
 import banner from '../assets/bannerBackground.gif'
 import bannerRunicRush from '../assets/RunicRush.jpg'
 import bannerMAC from '../assets/MACServiceDesk.jpg'
@@ -19,6 +18,8 @@ const TAG_COLORS = {
 
 const PROJECTS = [
     {
+        index: 1,
+        type : "Web Interactivo · CICATA MORELOS",
         title : 'Recorrido Virtual',
         description: 'Recorrido virtual 360° para el centro de investigación CICATA Morelos. Lideré al equipo bajo metodología SCRUM para personalizar una arquitectura open-source (Marzipano, HTML, CSS, JS), implementando hotspots interactivos y un chatbot integrado.',
         link: 'https://paolomardev.github.io/Despliege-Recorrido-Prueba/',
@@ -27,6 +28,8 @@ const PROJECTS = [
         tags: ['HTML', "CSS", "JavaScript"]
     },
     {
+        index: 2,
+        type : "Web Interactivo · MAC COMPUTADORAS",
         title : 'MAC Service Desk',
         description: 'Sistema de soporte técnico para la empresa MAC Computadoras. Lideré un equipo bajo metodología SCRUM y participé como desarrollador Full-Stack, construyendo la aplicación web en React y estructurando la API y base de datos con SQL y AWS.',
         link: '',
@@ -35,16 +38,20 @@ const PROJECTS = [
         tags: ['React', "SQL", "JavaScript"]
     },
     {
-    title : 'Runic Rush',
-    description: 'Videojuego desarrollado para la plataforma educativa "Aulify". Construido en Unity, incluyendo una integración web Full-Stack mediante React, AWS y bases de datos SQL para gestionar el progreso del jugador.',
+        index: 3,
+        type : "VideoJuego · Aulify",
+        title : 'Runic Rush',
+        description: 'Videojuego desarrollado para la plataforma educativa "Aulify". Construido en Unity, incluyendo una integración web Full-Stack mediante React, AWS y bases de datos SQL para gestionar el progreso del jugador.',
         link: 'https://play.unity.com/es/games/3bb52534-fa41-4500-869f-898ce485d50a/runicrush',
         github: '',
         image: bannerRunicRush,
         tags: ['Unity', "SQL", "JavaScript"]
     },
     {
-    title : 'Machine Learning Tanuki',
-    description: 'Proyecto desarrollado para Rewind Games enfocado en la creación de un agente virtual entrenado con Unity ML-Agents, diseñado para funcionar como un NPC guía. El objetivo fue que el agente pudiera seguir al jugador, mantenerse cerca de él y generar trayectorias.',
+        index: 4,
+        type : "Inteligencia Artificial · Rewind Games",
+        title : 'Machine Learning Tanuki',
+        description: 'Proyecto desarrollado para Rewind Games enfocado en la creación de un agente virtual entrenado con Unity ML-Agents, diseñado para funcionar como un NPC guía. El objetivo fue que el agente pudiera seguir al jugador, mantenerse cerca de él y generar trayectorias.',
         link: '',
         github: '',
         image: bannerTanuki,
@@ -55,33 +62,48 @@ const PROJECTS = [
 
 {
     PROJECTS.map(project => (
-        <article class="card-container project-card animate-on-scroll" data-tags={project.tags.join(',')}>
-            <Image class="project-banner" src={project.image} alt={`Captura de pantalla del proyecto ${project.image}`} />
-            <div class="card-content">
-                <h3 class="project-title">{project.title}</h3>
-                <ul class="tags-container">
-                    {project.tags.map(tag => (
-                        <li class="tags"style={{ backgroundColor: TAG_COLORS[tag as keyof typeof TAG_COLORS] || '#333'}}>
-                            {tag}
-                        </li>
-                    ))}
-                </ul>
-                <p>{project.description}</p>
-                <div class="buttons-container">
-                    {project.github && (
-                        <a href={project.github} class="link" target="_blank">
-                            <img src={`${import.meta.env.BASE_URL}/github.webp`} alt="GitHub Button" class="BtnsProjects"/>
-                        </a>
-                        )
-                    }
-                    {project.link && (
-                        <a href={project.link} class="link" target="_blank">
-                            <img src={`${import.meta.env.BASE_URL}/web.webp`} alt="Web Button" class="BtnsProjects"/>
-                        </a>
-                        )
-                    }
-                </div>
+        <div class="project-card reveal">
+        <div class="project-img">
+          <Image src={project.image} alt="Recorrido Virtual CICATA" loading="lazy" />
+        </div>
+        <div class="project-info">
+          <div>
+            <div class="project-meta">
+              <span class="project-num">0{project.index}</span>
+              <span style="color:var(--border2)">·</span>
+              <span class="project-type">{project.type}</span>
             </div>
-        </article>
+            <div class="project-name">{project.title}</div>
+            <div class="project-desc">
+              {project.description}
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-stack">
+              {project.tags.map (tag => (
+                <span class="stack-tag" style={
+                    {   color : TAG_COLORS[tag as keyof typeof TAG_COLORS], 
+                        borderColor : TAG_COLORS[tag as keyof typeof TAG_COLORS]
+                    }
+                }>{tag}</span>
+              ))}
+            </div>
+            <div class="project-links">
+            {project.github && (
+                <a href={project.github} class="icon-btn" target="_blank">
+                    <img src={`${import.meta.env.BASE_URL}/github.webp`} alt="GitHub Button" class="BtnsProjects"/>
+                </a>
+                )
+            }
+            {project.link && (
+                <a href={project.link} class="icon-btn" title="Live" target="_blank">
+                    <img src={`${import.meta.env.BASE_URL}/web.webp`} alt="Web Button" class="BtnsProjects"/>
+                </a>
+                )
+            }
+            </div>
+          </div>
+        </div>
+      </div>
     ))
 }
