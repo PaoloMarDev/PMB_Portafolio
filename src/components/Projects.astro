@@ -1,14 +1,14 @@
 ---
-import { Image } from "astro:assets";
+import '../styles/ProjectCard.css'
+import '../styles/Tokens.css'
 import ProjectCard from "./ProjectCard.astro";
 ---
-
 
 <section id="projects" >
     <section id="proyectos" style="background:var(--bg2);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border)">
     <div class="container">
-        <div class="section-eyebrow">Proyectos seleccionados</div>
-        <h2 class="section-title">Proyectos académicos hechos<br>para clientes reales.</h2>
+        <div class="section-eyebrow reveal">Proyectos seleccionados</div>
+        <h2 class="section-title reveal">Proyectos académicos hechos<br>para clientes reales.</h2>
         <div class="projects-grid">
             <ProjectCard />
         </div>

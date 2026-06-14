@@ -1,0 +1,18 @@
+/* ── STACK SECTION ── */
+  .stack-section { border-top: 0.5px solid var(--border); }
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .stack-group {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 1.25rem;
+  }
+  .stack-group-title { font-size: 12px; color: var(--text-ter); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+  .stack-items { display: flex; flex-direction: column; gap: 8px; }
+  .stack-item { display: flex; align-items: center; gap: 10px; }
+  .stack-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .stack-name { font-size: 14px; color: var(--text-sec); }

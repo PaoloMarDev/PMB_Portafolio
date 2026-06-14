@@ -1,54 +1,60 @@
-    p{
-        margin: 0;
-        padding: 0;
-        color: #bababa;
-    }
-    figure{
-        margin: 0;
-        padding: 0;
-    }
-    .AboutMe-header{
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
-    .AboutMe-title{
-        color: white;
-        font-weight: bold;
-        font-size: clamp(1rem, 3vw, 4rem);
-        text-align: center;
-        width: auto;
-    }
-    .linea{
-        flex-grow: 1;
-        height: 1px;
-        background-color: white;
-    }
-    .info{
-        display: flex;
-        justify-content: space-between;
-        flex: 1;
-        margin: 0%;
-        padding: 0%;
-    }
-    .description-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .description{
-        font-size: clamp(1rem, 1vw, 2rem);
-        font-weight: bold;
-        text-shadow: 2px 4px 10px black;
-        max-width: 81%;
-        width: 100%;
-        text-wrap: balacend;
-    }
-    .monsterImage{
-        padding-right: 8%;
-        margin-top: -5%;
-    }
-    .monster{
-        width: auto;
-        height: clamp(5vw, 20vw, 20vw);
-    }
+/* ── ABOUT / BENTO ── */
+  section { padding: 6rem 0; }
+  .section-eyebrow {
+    font-size: 12px;
+    color: var(--accent2);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+  }
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+  .bento-card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .bento-card:hover { border-color: var(--border2); }
+  .bento-card.wide { grid-column: span 2; }
+  .bento-card.tall { grid-row: span 2; }
+  .bento-card.accent { background: var(--accent-dim2); border-color: rgba(124,109,250,0.2); }
+  .bento-label { font-size: 11px; color: var(--text-ter); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+  .bento-title { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+  .bento-text { font-size: 14px; color: var(--text-sec); line-height: 1.6; }
+  .big-text { font-size: 3rem; font-weight: 700; letter-spacing: -0.05em; color: var(--text); margin: 0.5rem 0; }
+  .big-text span { color: var(--accent2); }
+ 
+  /* Tech logos row */
+  .tech-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+  .tech-badge {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 0.5px solid var(--border2);
+    background: var(--bg3);
+    color: var(--text-sec);
+  }
+  .tech-badge.primary { color: var(--accent2); border-color: rgba(167,139,250,0.3); background: var(--accent-dim2); }
+  .tech-badge.green { color: var(--green); border-color: rgba(52,211,153,0.3); background: var(--green-dim); }
+  .tech-badge.blue { color: var(--blue); border-color: rgba(96,165,250,0.3); background: var(--blue-dim); }
+  .tech-badge.amber { color: var(--amber); border-color: rgba(251,191,36,0.3); background: var(--amber-dim); }
+ 
